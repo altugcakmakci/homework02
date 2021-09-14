@@ -1,7 +1,7 @@
 :root {
-  --heliotrope: lightblue;
   --lighttextcolor: lightblue;
   --darktextcolor:darkblue;
+  --wheatcolor:wheat;
 }
 
 body {
@@ -10,15 +10,15 @@ body {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
+/* Header section */
 header {
-  padding: 40px;
   text-align: left;
   color: var(--darktextcolor);
   border:3px solid;
   border-radius: 10px;
   margin:20px;
   padding: 10px;
-  background-image:url('../images/frozen.jpeg');
+  background-image:url('../images/blueback.jpg');
 }
 
 header h1 {
@@ -44,27 +44,20 @@ header nav ul li {
   font-size: 36px;
 }
 
-header p {
-  color:white;
-}
-
+/* About section */
 .about{
   text-align: left;
-  margin:20px;
+  margin: 20px;
   padding: 10px;
 }
+
 .about h2{
-  font-size:20px;
+  font-size:36px;
   color:var(--darktextcolor);
   text-align:center;
 }
-.about pre{
-  font-size:18px;
-  color:var(--darktextcolor);
-  text-align: center;
-}
 
-.about p{
+.about p {
   font-size:24px;
   color:var(--darktextcolor);
   text-align: center;
@@ -78,24 +71,12 @@ header p {
   width: 10%;
 }
 
-.mywork h2{
-  font-size:20px;
+/* Mywork section */
+.mywork h2 {
+  font-size:30px;
   color:var(--darktextcolor);
   text-align:center;
 }
-
-.item {
-  background-color: white;
-}
-
-.item h2 {
-  background-color:var(--lighttextcolor);
-  color: var(--darktextcolor);
-  border:solid;
-  border-color: wheat;
-  padding:5px;
-}
-
 
 .item-container{
   display:flex;
@@ -105,13 +86,22 @@ header p {
 }
 
 .item {
-  width:20%;
+  background-color: white;
+  width:25%;
   border-style: solid;
   border-width: 3px;
   border-radius: 10px;
-  border-color: wheat;
+  border-color: var(--wheatcolor);
   padding: 20px;
   margin:10px;
+}
+
+.item h3 {
+  background-color:var(--lighttextcolor);
+  color: var(--darktextcolor);
+  border:solid;
+  border-color:var(--wheatcolor);
+  padding:5px;
 }
 
 .item img{
@@ -126,13 +116,18 @@ header p {
   opacity: 0.5;
 }
 
+/* Contact section */
 .contact {
   background-color:rgb(240, 239, 239);
   margin:50px;
   padding:20px;
 }
 
-
+.contact h2{
+  font-size:36px;
+  color:var(--darktextcolor);
+  text-align:center;
+}
 
 .contact-row {
   display:flex;
@@ -157,6 +152,22 @@ header p {
   padding:10px;
 }
 
+/* Footer section */
+footer {
+  text-align: left;
+  color: var(--darktextcolor);
+  border:3px solid;
+  border-radius: 10px;
+  margin:20px;
+  padding: 10px;
+  background-image:url('../images/blueback.jpg');
+}
+
+footer h3 {
+  display: inline-block;
+  font-size:20px;
+}
+
 .fa {
   padding: 20px;
   font-size: 30px;
@@ -165,65 +176,69 @@ header p {
   text-decoration: none;
 }
 
-/* Add a hover effect if you want */
 .fa:hover {
   opacity: 0.7;
 }
 
-/* Set a specific color for each brand */
-
-/* Facebook */
 .fa-facebook {
   background: #3B5998;
   color: white;
 }
 
-/* Twitter */
 .fa-twitter {
   background: #55ACEE;
   color: white;
 }
 
-.fa-linkedin {
-  background: #0e76a8;
+.fa-google {
+  background: #dd4b39;
   color: white;
 }
 
-footer {
-  text-align: left;
-  color: var(--darktextcolor);
-  border:3px solid;
-  border-radius: 10px;
-  margin:20px;
-  padding: 10px;
-  background-image:url('../images/frozen.jpeg');
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
 }
 
-footer h3{
-  display: inline-block;
+.fa-youtube {
+  background: #bb0000;
+  color: white;
 }
 
 .links{
   float:right;
 }
 
+/* Settings for tablest */
 @media screen and (max-width: 768px) {
   .item{
     width:35%;
   }
-}
 
-.contact h2 {
-  text-align: center;
-  font-size:24px;
-  color: var(--darktextcolor);
-}
-
-.about p{
-  width:75%;
-}
+  .contact h2 {
+    text-align: center;
+    font-size:24px;
+    color: var(--darktextcolor);
+  }
   
-@media screen and (max-width: 500px) {
+  .about p{
+    width:75%;
+  }
+  
+  .fa {
+    padding: 15px;
+    font-size: 20px;
+    width: 28px;
+  }
+
+  footer h3{
+    font-size: 16px;
+  }
+}
+
+  
+/* Mobile settings */
+@media screen and (max-width: 550px) {
   .item-container{
     display:flex;
     flex-direction: column;
@@ -237,5 +252,15 @@ footer h3{
 
   .about p{
     width:90%;
+  }
+
+  .fa {
+    padding: 10px;
+    font-size: 15px;
+    width: 25px;
+  }
+
+  footer h3{
+    font-size: 12px;
   }
 }
